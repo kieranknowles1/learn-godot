@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://cr0vn0goluo43"]
+[gd_scene load_steps=15 format=4 uid="uid://cr0vn0goluo43"]
 
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_5aobr"]
 [ext_resource type="PackedScene" uid="uid://p8bosniw2cug" path="res://assets/player.tscn" id="1_er8li"]
 [ext_resource type="TileSet" uid="uid://bdiv1fd21qhn3" path="res://assets/world_tileset.tres" id="2_m64a5"]
 [ext_resource type="PackedScene" uid="uid://vppusydr6eof" path="res://assets/platform.tscn" id="3_efkej"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bka0iqvy0oe8m" path="res://assets/green_slime.tscn" id="5_ei2gx"]
 [ext_resource type="PackedScene" uid="uid://bjhp0n5p2rlo8" path="res://assets/kill_trigger.tscn" id="5_p8qgu"]
 [ext_resource type="FontFile" uid="uid://c7gwrxyx52wgv" path="res://addons/brackeys/fonts/PixelOperator8.ttf" id="7_8s4br"]
+[ext_resource type="Script" path="res://scripts/score_display.gd" id="8_vwimc"]
 
 [sub_resource type="Animation" id="Animation_aspke"]
 length = 3.0
@@ -55,6 +57,10 @@ size = Vector2(255, 45)
 
 [node name="Game" type="Node2D"]
 
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_5aobr")
+
 [node name="Tiles" type="Node" parent="."]
 
 [node name="Background" type="TileMapLayer" parent="Tiles"]
@@ -87,6 +93,18 @@ position = Vector2(335, -29)
 
 [node name="Coin5" parent="Pickups" instance=ExtResource("4_1uyiy")]
 position = Vector2(303, -28)
+
+[node name="Coin7" parent="Pickups" instance=ExtResource("4_1uyiy")]
+position = Vector2(613, 22)
+
+[node name="Coin8" parent="Pickups" instance=ExtResource("4_1uyiy")]
+position = Vector2(896, -15)
+
+[node name="Coin9" parent="Pickups" instance=ExtResource("4_1uyiy")]
+position = Vector2(851, 0)
+
+[node name="Coin10" parent="Pickups" instance=ExtResource("4_1uyiy")]
+position = Vector2(939, -23)
 
 [node name="Coin6" parent="Pickups" instance=ExtResource("4_1uyiy")]
 position = Vector2(367, -28)
@@ -144,6 +162,25 @@ offset_bottom = -17.0
 theme_override_fonts/font = ExtResource("7_8s4br")
 theme_override_font_sizes/font_size = 8
 text = "Almost There"
+
+[node name="Score" type="Label" parent="Text"]
+offset_left = 1007.0
+offset_top = -40.0
+offset_right = 1087.0
+offset_bottom = -21.0
+theme_override_fonts/font = ExtResource("7_8s4br")
+theme_override_font_sizes/font_size = 8
+text = "Score: X/Y"
+script = ExtResource("8_vwimc")
+
+[node name="MadeIt" type="Label" parent="Text"]
+offset_left = 1007.0
+offset_top = -49.0
+offset_right = 1087.0
+offset_bottom = -30.0
+theme_override_fonts/font = ExtResource("7_8s4br")
+theme_override_font_sizes/font_size = 8
+text = "Made It!"
 
 [node name="TutSwim" type="Label" parent="Text"]
 offset_left = 313.0
