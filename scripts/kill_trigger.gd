@@ -4,6 +4,9 @@ extends Area2D
 
 # Kill the player on contact
 func _on_body_entered(body: Node2D) -> void:
+	if not restart_delay.is_stopped():
+		return
+
 	restart_delay.start()
 
 	# Play the death animation

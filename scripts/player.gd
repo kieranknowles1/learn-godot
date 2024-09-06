@@ -12,12 +12,17 @@ var dead = false
 
 @onready var animation: AnimatedSprite2D = $Animation
 
+@onready var snd_hurt: AudioStreamPlayer2D = $Hurt
+@onready var snd_jump: AudioStreamPlayer2D = $Jump
+
 func can_jump() -> bool:
 	return air_time < COYOTE_TIME
 
-# Prevent jumping until the player lands on the ground.
-func block_jump() -> void:
+func jump() -> void:
+	velocity.y = JUMP_VELOCITY
+	# Prevent jumping until the player lands on the ground.
 	air_time = COYOTE_TIME
+	snd_jump.play()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -33,8 +38,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and can_jump():
-		velocity.y = JUMP_VELOCITY
-		block_jump()
+		jump()
 
 	# Get the input direction and handle the movement/deceleration.
 	# Can be between -1 and 1.
@@ -48,11 +52,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	# Play the correct animation.
-	animation.play(pick_anim())
+	animation.play(get_target_anim())
 
 	move_and_slide()
 
-func pick_anim() -> StringName:
+func get_target_anim() -> StringName:
 	if not is_on_floor():
 		return "jump"
 	elif velocity.x != 0:
@@ -62,4 +66,5 @@ func pick_anim() -> StringName:
 
 func die() -> void:
 	dead = true
+	snd_hurt.play()
 	animation.play("death")
