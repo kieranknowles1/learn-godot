@@ -4,4 +4,7 @@ extends Label
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	text = "Score: " + str(game_manager.score) + " / " + str(game_manager.max_score)
+	text = tr("END_MESSAGE").format({
+		"score": str(game_manager.score),
+		"max_score": str(game_manager.max_score),
+	})

@@ -152,16 +152,7 @@ offset_right = 574.0
 offset_bottom = 7.0
 theme_override_fonts/font = ExtResource("7_8s4br")
 theme_override_font_sizes/font_size = 8
-text = "Slimes Hurt"
-
-[node name="Encouragement" type="Label" parent="Text"]
-offset_left = 869.0
-offset_top = -36.0
-offset_right = 949.0
-offset_bottom = -17.0
-theme_override_fonts/font = ExtResource("7_8s4br")
-theme_override_font_sizes/font_size = 8
-text = "Almost There"
+text = "TUTOR_SLIME"
 
 [node name="Score" type="Label" parent="Text"]
 offset_left = 1007.0
@@ -170,17 +161,8 @@ offset_right = 1087.0
 offset_bottom = -21.0
 theme_override_fonts/font = ExtResource("7_8s4br")
 theme_override_font_sizes/font_size = 8
-text = "Score: X/Y"
+text = "END_SCORE"
 script = ExtResource("8_vwimc")
-
-[node name="MadeIt" type="Label" parent="Text"]
-offset_left = 1007.0
-offset_top = -49.0
-offset_right = 1087.0
-offset_bottom = -30.0
-theme_override_fonts/font = ExtResource("7_8s4br")
-theme_override_font_sizes/font_size = 8
-text = "Made It!"
 
 [node name="TutSwim" type="Label" parent="Text"]
 offset_left = 313.0
@@ -189,7 +171,7 @@ offset_right = 404.0
 offset_bottom = -31.0
 theme_override_fonts/font = ExtResource("7_8s4br")
 theme_override_font_sizes/font_size = 8
-text = "You Can't Swim"
+text = "TUTOR_NO_SWIM"
 
 [node name="TutJump" type="Label" parent="Text"]
 offset_left = 106.0
@@ -198,8 +180,7 @@ offset_right = 180.0
 offset_bottom = -25.0
 theme_override_fonts/font = ExtResource("7_8s4br")
 theme_override_font_sizes/font_size = 8
-text = "Press Space
-to Jump"
+text = "TUTOR_JUMP"
 
 [node name="Enemies" type="Node" parent="."]
 

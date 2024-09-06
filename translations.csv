@@ -1,0 +1,5 @@
+key,en
+TUTOR_JUMP,Press SPACE\nto jump
+TUTOR_NO_SWIM,"You can't swim,\navoid water"
+TUTOR_SLIME,"Slimes are dangerous,\nand you don't have a weapon"
+END_MESSAGE,"You made it!\nScore: {score}/{max_score}"
