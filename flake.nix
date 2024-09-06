@@ -11,6 +11,7 @@
       godot = pkgs.godot_4;
     in {
       default = pkgs.writeShellScriptBin "editor" ''
+        cd ./godot
         exec ${pkgs.lib.getExe godot} --editor
       '';
     };
