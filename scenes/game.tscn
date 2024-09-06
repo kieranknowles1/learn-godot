@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://cr0vn0goluo43"]
+[gd_scene load_steps=8 format=4 uid="uid://cr0vn0goluo43"]
 
 [ext_resource type="PackedScene" uid="uid://p8bosniw2cug" path="res://assets/player.tscn" id="1_er8li"]
 [ext_resource type="TileSet" uid="uid://bdiv1fd21qhn3" path="res://assets/world_tileset.tres" id="2_m64a5"]
 [ext_resource type="PackedScene" uid="uid://vppusydr6eof" path="res://assets/platform.tscn" id="3_efkej"]
+[ext_resource type="PackedScene" uid="uid://b6a72v0avn3r" path="res://assets/coin.tscn" id="4_1uyiy"]
 
 [sub_resource type="Animation" id="Animation_sdsrq"]
 resource_name = "move"
@@ -65,3 +66,15 @@ libraries = {
 "": SubResource("AnimationLibrary_xd0cx")
 }
 autoplay = "move"
+
+[node name="Coin" parent="." instance=ExtResource("4_1uyiy")]
+position = Vector2(87, -13)
+
+[node name="Coin2" parent="." instance=ExtResource("4_1uyiy")]
+position = Vector2(182, -31)
+
+[node name="Coin3" parent="." instance=ExtResource("4_1uyiy")]
+position = Vector2(335, -29)
+
+[node name="Coin4" parent="." instance=ExtResource("4_1uyiy")]
+position = Vector2(267, -83)
