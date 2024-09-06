@@ -1,0 +1,14 @@
+[package]
+name = "rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# Compile as a C dynamic library (.dll, .so, etc.)
+# Normally, Rust is statically linked. Godot is a special case and is dynamically linked.
+crate-type = ["cdylib"]
+
+[dependencies]
+godot = { git = "https://github.com/godot-rust/gdext", branch = "master" }
