@@ -1,4 +1,5 @@
-extends Node
+class_name GameManager extends Node
+
 
 var score: int = 0
 var max_score: int = 0

@@ -1,6 +1,6 @@
 extends Label
 
-@onready var game_manager: Node = %GameManager
+@onready var game_manager: GameManager = %GameManager
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
