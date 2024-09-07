@@ -3,7 +3,7 @@ extends Label
 @onready var game_manager: GameManager = %GameManager
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	text = tr("END_MESSAGE").format({
 		"score": str(game_manager.score),
 		"max_score": str(game_manager.max_score),
