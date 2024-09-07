@@ -1,6 +1,7 @@
 extends Node2D
 
-const SPEED = 45.0
+## The slime's speed in units per second
+@export var speed: int = 45
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 
@@ -20,4 +21,4 @@ func _process(delta: float) -> void:
 		direction = Vector2.LEFT
 		sprite.flip_h = true
 
-	position += direction * SPEED * delta
+	position += direction * speed * delta

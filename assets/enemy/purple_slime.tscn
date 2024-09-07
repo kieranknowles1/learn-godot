@@ -1,0 +1,112 @@
+[gd_scene load_steps=16 format=3 uid="uid://lko0hrhpgqw8"]
+
+[ext_resource type="PackedScene" uid="uid://bka0iqvy0oe8m" path="res://assets/enemy/green_slime.tscn" id="1_dwglm"]
+[ext_resource type="Texture2D" uid="uid://cnhb8e0sogwgc" path="res://addons/brackeys/sprites/slime_purple.png" id="2_ccunn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1orbh"]
+atlas = ExtResource("2_ccunn")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8amwv"]
+atlas = ExtResource("2_ccunn")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrvl2"]
+atlas = ExtResource("2_ccunn")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_825ov"]
+atlas = ExtResource("2_ccunn")
+region = Rect2(72, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yy61t"]
+atlas = ExtResource("2_ccunn")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0c7os"]
+atlas = ExtResource("2_ccunn")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmrm0"]
+atlas = ExtResource("2_ccunn")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3h81x"]
+atlas = ExtResource("2_ccunn")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m214x"]
+atlas = ExtResource("2_ccunn")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t00d"]
+atlas = ExtResource("2_ccunn")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xaou1"]
+atlas = ExtResource("2_ccunn")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4s2rs"]
+atlas = ExtResource("2_ccunn")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a5hx8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1orbh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8amwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrvl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_825ov")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yy61t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0c7os")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmrm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3h81x")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m214x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5t00d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xaou1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4s2rs")
+}],
+"loop": true,
+"name": &"wake",
+"speed": 5.0
+}]
+
+[node name="PurpleSlime" instance=ExtResource("1_dwglm")]
+speed = 60
+
+[node name="Sprite" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_a5hx8")
