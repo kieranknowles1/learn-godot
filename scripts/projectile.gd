@@ -4,14 +4,19 @@ const SPEED = 90
 
 var direction: Vector2
 
+var hit = false
+
 @onready var animatiom: AnimationPlayer = $Animation
 
 func _on_impact() -> void:
 	# This deletes the projectile automatically
 	animatiom.play("explode")
+	hit = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if hit:
+		return
 	position += SPEED * direction * delta
 
 # We touch something, not necessarily a character
