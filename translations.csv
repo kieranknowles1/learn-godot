@@ -1,6 +1,8 @@
 key,en
 
 MENU_TITLE,"Learn Godot"
+MENU_PLATFORMER,"Platformer"
+MENU_QUIT,"Quit"
 
 TUTOR_JUMP,Press SPACE\nto jump
 TUTOR_NO_SWIM,"You can't swim,\navoid water"
