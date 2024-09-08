@@ -22,3 +22,6 @@ func _process(delta: float) -> void:
 		sprite.flip_h = true
 
 	position += direction * speed * delta
+
+func die() -> void:
+	queue_free()

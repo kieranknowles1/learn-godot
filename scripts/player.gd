@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody2D
 
-
+const PROJECTILE: PackedScene = preload("res://assets/projectile.tscn")
 const SPEED = 125.0
 const JUMP_VELOCITY = -300.0
 
@@ -11,7 +11,9 @@ var air_time = 0.0
 var dead = false
 
 @onready var animation: AnimatedSprite2D = $Animation
+@onready var attack_origin: Node2D = $AttackOrigin
 
+@onready var snd_attack: AudioStreamPlayer2D = $Attack
 @onready var snd_hurt: AudioStreamPlayer2D = $Hurt
 @onready var snd_jump: AudioStreamPlayer2D = $Jump
 
@@ -24,6 +26,16 @@ func jump() -> void:
 	air_time = COYOTE_TIME
 	snd_jump.play()
 
+func _attack() -> void:
+	snd_attack.play()
+	var shot = PROJECTILE.instantiate()
+	shot.global_position = attack_origin.global_position
+	
+	# TODO: Using animations to hold logic is bad
+	shot.direction = Vector2.LEFT if animation.flip_h else Vector2.RIGHT
+	
+	get_parent().add_child(shot)
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -35,6 +47,9 @@ func _physics_process(delta: float) -> void:
 	# Early out if the player is dead, only process gravity.
 	if dead:
 		return
+
+	if Input.is_action_just_pressed("attack"):
+		_attack()
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and can_jump():

@@ -1,9 +1,10 @@
-[gd_scene load_steps=44 format=3 uid="uid://p8bosniw2cug"]
+[gd_scene load_steps=45 format=3 uid="uid://p8bosniw2cug"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ouhki"]
 [ext_resource type="Texture2D" uid="uid://b2rbd6vjrvxs5" path="res://addons/brackeys/sprites/knight.png" id="1_rk1aj"]
 [ext_resource type="AudioStream" uid="uid://c858qefjd40u6" path="res://addons/brackeys/sounds/hurt.wav" id="3_2shld"]
 [ext_resource type="AudioStream" uid="uid://bd4ebdmec5x4m" path="res://addons/brackeys/sounds/jump.wav" id="4_i3exq"]
+[ext_resource type="AudioStream" uid="uid://xiu1bcsjiygb" path="res://addons/brackeys/sounds/tap.wav" id="5_s5meo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pk5q8"]
 atlas = ExtResource("1_rk1aj")
@@ -324,6 +325,12 @@ bus = &"Effects"
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_i3exq")
 bus = &"Effects"
+
+[node name="Attack" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_s5meo")
+
+[node name="AttackOrigin" type="Node2D" parent="."]
+position = Vector2(0, -12)
 
 [connection signal="animation_looped" from="Animation" to="." method="_on_animation_animation_looped"]
 [connection signal="frame_changed" from="Animation" to="." method="_on_animation_frame_changed"]
