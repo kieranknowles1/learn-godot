@@ -29,10 +29,7 @@ func jump() -> void:
 func _attack() -> void:
 	snd_attack.play()
 	var shot = PROJECTILE.instantiate()
-	shot.global_position = attack_origin.global_position
-	
-	# TODO: Using animations to hold logic is bad
-	shot.direction = Vector2.LEFT if animation.flip_h else Vector2.RIGHT
+	shot.init(self)
 	
 	get_parent().add_child(shot)
 
