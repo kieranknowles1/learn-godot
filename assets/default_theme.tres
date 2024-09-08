@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dqq5pwsrbeel8"]
+
+[ext_resource type="FontFile" uid="uid://c7gwrxyx52wgv" path="res://addons/brackeys/fonts/PixelOperator8.ttf" id="1_44noo"]
+
+[resource]
+default_font = ExtResource("1_44noo")
+default_font_size = 8

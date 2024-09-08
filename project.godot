@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 AutoLoad="*res://scenes/auto_load.tscn"
 
+[gui]
+
+theme/custom="res://assets/default_theme.tres"
+
 [input]
 
 jump={
