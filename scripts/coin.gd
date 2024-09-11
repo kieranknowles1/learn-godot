@@ -1,12 +1,19 @@
 extends Area2D
 
+## The GameManager node in the scene.
+## Defaults to a scene-unique GameManager node.
+@export var game_manager: GameManager
+
 # GameManager must be unique across the scene. This kind of reference
 # only works when the node is in the same scene as the script.
-@onready var game_manager: GameManager = %GameManager
+# @onready var game_manager: GameManager = %GameManager
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 # Count the max score on start
 func _ready() -> void:
+	if not game_manager:
+		game_manager = %GameManager
+
 	game_manager.add_coin()
 
 # Triggered when the player enters the coin's area.

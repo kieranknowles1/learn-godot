@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://lko0hrhpgqw8"]
+[gd_scene load_steps=17 format=3 uid="uid://lko0hrhpgqw8"]
 
 [ext_resource type="PackedScene" uid="uid://bka0iqvy0oe8m" path="res://assets/enemy/green_slime.tscn" id="1_dwglm"]
 [ext_resource type="Texture2D" uid="uid://cnhb8e0sogwgc" path="res://addons/brackeys/sprites/slime_purple.png" id="2_ccunn"]
+[ext_resource type="PackedScene" uid="uid://b6a72v0avn3r" path="res://assets/coin.tscn" id="2_jq1su"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1orbh"]
 atlas = ExtResource("2_ccunn")
@@ -107,6 +108,7 @@ animations = [{
 
 [node name="PurpleSlime" instance=ExtResource("1_dwglm")]
 speed = 60
+death_item = ExtResource("2_jq1su")
 
 [node name="Sprite" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_a5hx8")

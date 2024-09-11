@@ -149,10 +149,10 @@ shape = SubResource("RectangleShape2D_ledvh")
 [node name="Text" type="Node" parent="."]
 
 [node name="TutSlime" type="Label" parent="Text"]
-offset_left = 500.0
-offset_top = -12.0
-offset_right = 574.0
-offset_bottom = 7.0
+offset_left = 501.0
+offset_top = -24.0
+offset_right = 576.0
+offset_bottom = -5.0
 text = "TUTOR_SLIME"
 
 [node name="ScoreDisplay" parent="Text" node_paths=PackedStringArray("game_manager") instance=ExtResource("7_e058c")]

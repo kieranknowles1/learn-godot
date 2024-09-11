@@ -35,7 +35,8 @@ msgstr "Quit"
 msgid "TUTOR_SLIME"
 msgstr ""
 "Slimes are dangerous,\n"
-"Press E to attack"
+"Press E to attack\n"
+"Purple slimes carry gold!"
 
 #: scenes/game.tscn
 msgid "TUTOR_NO_SWIM"
