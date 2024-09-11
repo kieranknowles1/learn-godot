@@ -1,0 +1,56 @@
+# LANGUAGE translation for Learn Godot for the following files:
+# res://scenes/menu.tscn
+# res://scenes/game.tscn
+# res://assets/score_display.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Learn Godot\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: scenes/menu.tscn
+msgid "MENU_TITLE"
+msgstr "Learn Godot"
+
+#: scenes/menu.tscn
+msgid "MENU_PLATFORMER"
+msgstr "Platformer"
+
+#: scenes/menu.tscn
+msgid "MENU_QUIT"
+msgstr "Quit"
+
+#: scenes/game.tscn
+msgid "TUTOR_SLIME"
+msgstr ""
+"Slimes are dangerous,\n"
+"Press E to attack"
+
+#: scenes/game.tscn
+msgid "TUTOR_NO_SWIM"
+msgstr ""
+"You can't swim,\n"
+"avoid water"
+
+#: scenes/game.tscn
+msgid "TUTOR_JUMP"
+msgstr ""
+"Press SPACE\n"
+"to jump"
+
+#: assets/score_display.tscn
+msgid "SCORE_DISPLAY"
+msgstr ""
+"You made it!\n"
+"Score: {score}/{max_score}"

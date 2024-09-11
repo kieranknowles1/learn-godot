@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqrthumdwvuq6"]
+
+[ext_resource type="Script" path="res://scripts/score_display.gd" id="1_jh6fg"]
+
+[node name="ScoreDisplay" type="Label"]
+offset_left = 1007.0
+offset_top = -40.0
+offset_right = 1087.0
+offset_bottom = -21.0
+text = "SCORE_DISPLAY"
+script = ExtResource("1_jh6fg")

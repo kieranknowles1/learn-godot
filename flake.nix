@@ -25,12 +25,12 @@
       in nixcfg.lib.shell.mkShellEx {
         packages = [
           godot
+          pkgs.gettext
         ];
 
         shellHook = ''
           # Run the editor in the background, discarding stdout and stderr
           ${openEditor} > /dev/null 2>&1 &
-          code . &
         '';
       };
     };
