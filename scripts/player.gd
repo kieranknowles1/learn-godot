@@ -17,6 +17,8 @@ var dead = false
 @onready var snd_hurt: AudioStreamPlayer2D = $Hurt
 @onready var snd_jump: AudioStreamPlayer2D = $Jump
 
+@onready var death_restart: Timer = $DeathRestart
+
 func can_jump() -> bool:
 	return air_time < COYOTE_TIME
 
@@ -30,7 +32,7 @@ func _attack() -> void:
 	snd_attack.play()
 	var shot = PROJECTILE.instantiate()
 	shot.init(self)
-	
+
 	get_parent().add_child(shot)
 
 func _physics_process(delta: float) -> void:
@@ -77,6 +79,14 @@ func get_target_anim() -> StringName:
 		return "idle"
 
 func die() -> void:
+	# Only die once.
+	if dead:
+		return
 	dead = true
 	snd_hurt.play()
 	animation.play("death")
+
+	death_restart.start()
+
+func _on_death_restart_timeout() -> void:
+	get_tree().reload_current_scene()

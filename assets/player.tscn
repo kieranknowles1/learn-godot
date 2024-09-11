@@ -40,5 +40,8 @@ stream = ExtResource("5_s5meo")
 [node name="AttackOrigin" type="Node2D" parent="."]
 position = Vector2(0, -12)
 
+[node name="DeathRestart" type="Timer" parent="."]
+
 [connection signal="animation_looped" from="Animation" to="." method="_on_animation_animation_looped"]
 [connection signal="frame_changed" from="Animation" to="." method="_on_animation_frame_changed"]
+[connection signal="timeout" from="DeathRestart" to="." method="_on_death_restart_timeout"]
