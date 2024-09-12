@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bdiv1fd21qhn3"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bdiv1fd21qhn3"]
 
 [ext_resource type="Texture2D" uid="uid://bpk847safqrkj" path="res://addons/brackeys/sprites/world_tileset.png" id="1_cpp20"]
+[ext_resource type="Texture2D" uid="uid://cdrw6pbify31o" path="res://assets/sprites/water_anim.png" id="2_2xiba"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t2lgo"]
 texture = ExtResource("1_cpp20")
@@ -110,9 +111,7 @@ texture = ExtResource("1_cpp20")
 1:9/0 = 0
 2:9/0 = 0
 3:9/0 = 0
-4:9/0 = 0
 5:9/0 = 0
-6:9/0 = 0
 7:9/0 = 0
 0:10/0 = 0
 1:10/0 = 0
@@ -124,7 +123,6 @@ texture = ExtResource("1_cpp20")
 1:11/0 = 0
 2:11/0 = 0
 3:11/0 = 0
-4:11/0 = 0
 5:11/0 = 0
 0:12/0 = 0
 1:12/0 = 0
@@ -135,7 +133,6 @@ texture = ExtResource("1_cpp20")
 1:13/0 = 0
 2:13/0 = 0
 3:13/0 = 0
-4:13/0 = 0
 5:13/0 = 0
 0:14/0 = 0
 1:14/0 = 0
@@ -163,6 +160,30 @@ texture = ExtResource("1_cpp20")
 2:4/size_in_atlas = Vector2i(3, 3)
 2:4/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7flyu"]
+texture = ExtResource("2_2xiba")
+0:0/animation_columns = 2
+0:0/animation_speed = 2.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/0 = 0
+0:1/animation_columns = 2
+0:1/animation_speed = 2.0
+0:1/animation_frame_0/duration = 1.0
+0:1/animation_frame_1/duration = 1.0
+0:1/0 = 0
+0:2/animation_columns = 2
+0:2/animation_speed = 2.0
+0:2/animation_frame_0/duration = 1.0
+0:2/animation_frame_1/duration = 1.0
+0:2/0 = 0
+0:3/animation_columns = 2
+0:3/animation_speed = 2.0
+0:3/animation_frame_0/duration = 1.0
+0:3/animation_frame_1/duration = 1.0
+0:3/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_t2lgo")
+sources/1 = SubResource("TileSetAtlasSource_7flyu")
