@@ -16,8 +16,7 @@ func init(player: Player):
 	shot_by = player
 	global_position = player.attack_origin.global_position
 
-	# TODO: Using animations to hold logic is bad
-	direction = Vector2.LEFT if player.animation.flip_h else Vector2.RIGHT
+	direction = player.facing
 
 func _on_impact() -> void:
 	animatiom.play("explode")

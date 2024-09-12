@@ -1,5 +1,9 @@
 class_name Player extends CharacterBody2D
 
+## The direction the player is facing.
+## Updated automatically when moving.
+@export var facing = Vector2.RIGHT
+
 const PROJECTILE: PackedScene = preload("res://assets/projectile.tscn")
 const SPEED = 125.0
 const JUMP_VELOCITY = -300.0
@@ -62,6 +66,8 @@ func _physics_process(delta: float) -> void:
 
 		# Flip sprite towards last input
 		animation.flip_h = direction < 0
+		# Track the last move direction for later use (projectile direction).
+		facing = Vector2(direction, 0)
 	else: # If the player is not moving.
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
