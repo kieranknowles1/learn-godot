@@ -4,7 +4,9 @@ class_name Player extends CharacterBody2D
 ## Updated automatically when moving.
 @export var facing = Vector2.RIGHT
 
-const PROJECTILE: PackedScene = preload("res://assets/projectile.tscn")
+## The projectile scene to spawn when attacking.
+@export var projectile: PackedScene
+
 const SPEED = 125.0
 const JUMP_VELOCITY = -300.0
 
@@ -34,7 +36,7 @@ func jump() -> void:
 
 func _attack() -> void:
 	snd_attack.play()
-	var shot = PROJECTILE.instantiate()
+	var shot = projectile.instantiate()
 	shot.init(self)
 
 	get_parent().add_child(shot)
