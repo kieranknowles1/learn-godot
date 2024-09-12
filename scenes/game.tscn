@@ -54,7 +54,7 @@ _data = {
 distance = -47.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ledvh"]
-size = Vector2(255, 45)
+size = Vector2(288, 45)
 
 [node name="Game" type="Node2D"]
 
@@ -140,13 +140,15 @@ position = Vector2(271, 32)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Logic/FallOff"]
 position = Vector2(-3, 23)
 shape = SubResource("WorldBoundaryShape2D_n3lcd")
+debug_color = Color(0.992243, 0, 0.254731, 0.42)
 
 [node name="WaterKill" parent="Logic" instance=ExtResource("5_p8qgu")]
 position = Vector2(386, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Logic/WaterKill"]
-position = Vector2(-18.5, 25.5)
+position = Vector2(-2, 25.5)
 shape = SubResource("RectangleShape2D_ledvh")
+debug_color = Color(0.992157, 0, 0.254902, 0.419608)
 
 [node name="Text" type="Node" parent="."]
 
