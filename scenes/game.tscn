@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cr0vn0goluo43"]
+[gd_scene load_steps=16 format=4 uid="uid://cr0vn0goluo43"]
 
 [ext_resource type="PackedScene" uid="uid://p8bosniw2cug" path="res://assets/player.tscn" id="1_er8li"]
 [ext_resource type="TileSet" uid="uid://bdiv1fd21qhn3" path="res://assets/world_tileset.tres" id="2_m64a5"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bka0iqvy0oe8m" path="res://assets/enemy/green_slime.tscn" id="5_ei2gx"]
 [ext_resource type="PackedScene" uid="uid://bjhp0n5p2rlo8" path="res://assets/kill_trigger.tscn" id="5_p8qgu"]
 [ext_resource type="PackedScene" uid="uid://dqrthumdwvuq6" path="res://assets/score_display.tscn" id="7_e058c"]
+[ext_resource type="PackedScene" uid="uid://jdpi2mccp8ca" path="res://assets/pickups/fruit.tscn" id="9_yxdcy"]
 [ext_resource type="PackedScene" uid="uid://lko0hrhpgqw8" path="res://assets/enemy/purple_slime.tscn" id="10_pjnw8"]
 
 [sub_resource type="Animation" id="Animation_aspke"]
@@ -112,6 +113,9 @@ position = Vector2(367, -28)
 
 [node name="Coin4" parent="Pickups" instance=ExtResource("4_1uyiy")]
 position = Vector2(267, -83)
+
+[node name="Fruit" parent="Pickups" instance=ExtResource("9_yxdcy")]
+position = Vector2(72, -46)
 
 [node name="Interaction" type="Node" parent="."]
 

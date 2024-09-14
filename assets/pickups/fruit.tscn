@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://jdpi2mccp8ca"]
+
+[ext_resource type="PackedScene" uid="uid://b6a72v0avn3r" path="res://assets/pickups/coin.tscn" id="1_jehmp"]
+[ext_resource type="Texture2D" uid="uid://do3lgd7alchfe" path="res://addons/brackeys/sprites/fruit.png" id="2_7wcjm"]
+[ext_resource type="AudioStream" uid="uid://dnarqx867tvbf" path="res://addons/brackeys/sounds/power_up.wav" id="3_aca5b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3x0qy"]
+atlas = ExtResource("2_7wcjm")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twxh7"]
+atlas = ExtResource("2_7wcjm")
+region = Rect2(32, 32, 15, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lu4v8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3x0qy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twxh7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Fruit" instance=ExtResource("1_jehmp")]
+value = 3
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_lu4v8")
+frame_progress = 0.0
+
+[node name="PickUp" parent="." index="2"]
+stream = ExtResource("3_aca5b")
