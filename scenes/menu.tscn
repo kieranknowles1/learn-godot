@@ -14,6 +14,7 @@ offset_left = -46.0
 offset_top = -71.0
 offset_right = 46.0
 offset_bottom = -48.0
+theme_type_variation = &"HeaderLarge"
 text = "MENU_TITLE"
 horizontal_alignment = 1
 

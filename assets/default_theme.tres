@@ -1,7 +1,9 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dqq5pwsrbeel8"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dqq5pwsrbeel8"]
 
 [ext_resource type="FontFile" uid="uid://c7gwrxyx52wgv" path="res://addons/brackeys/fonts/PixelOperator8.ttf" id="1_44noo"]
+[ext_resource type="FontFile" uid="uid://b4hj671wrysgf" path="res://addons/brackeys/fonts/PixelOperator8-Bold.ttf" id="1_jubsl"]
 
 [resource]
 default_font = ExtResource("1_44noo")
 default_font_size = 8
+HeaderLarge/fonts/font = ExtResource("1_jubsl")
