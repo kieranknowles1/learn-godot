@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_0bme8"]
 [ext_resource type="TileSet" uid="uid://bdiv1fd21qhn3" path="res://assets/world_tileset.tres" id="1_vv2no"]
-[ext_resource type="SpriteFrames" uid="uid://dqmv7hw77p1yy" path="res://assets/player_sprite.tres" id="2_yf2c2"]
+[ext_resource type="SpriteFrames" uid="uid://dqmv7hw77p1yy" path="res://assets/sprites/player_sprite.tres" id="2_yf2c2"]
 
 [node name="Menu" type="Node2D"]
 
