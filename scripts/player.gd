@@ -16,6 +16,8 @@ var air_time = 0.0
 
 var dead = false
 
+var score = 0
+
 @onready var animation: AnimatedSprite2D = $Animation
 @onready var attack_origin: Node2D = $AttackOrigin
 
@@ -98,3 +100,11 @@ func die() -> void:
 
 func _on_death_restart_timeout() -> void:
 	get_tree().reload_current_scene()
+
+func add_points(points: int) -> void:
+	score += points
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area is CollectableComponent:
+		area.on_collected(self)

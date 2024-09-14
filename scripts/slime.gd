@@ -30,9 +30,6 @@ func die() -> void:
 	if death_item:
 		var item: Node2D = death_item.instantiate()
 		item.global_position = global_position
-		# FIXME: Need a better way to reference the GameManager, a scene-unique node is a bit of a hack
-		# as it makes assumptions about the scene structure (that it has a GameManager node).
-		item.game_manager = %GameManager
 		get_parent().add_child(item)
 
 	queue_free()

@@ -1,8 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://b6a72v0avn3r"]
+[gd_scene load_steps=23 format=3 uid="uid://b6a72v0avn3r"]
 
 [ext_resource type="Script" path="res://scripts/coin.gd" id="1_agdcu"]
 [ext_resource type="Texture2D" uid="uid://cqhmo5lv8f3lv" path="res://addons/brackeys/sprites/coin.png" id="1_hcj0o"]
 [ext_resource type="AudioStream" uid="uid://8ju8vlmrgg1y" path="res://addons/brackeys/sounds/coin.wav" id="3_7cu40"]
+[ext_resource type="PackedScene" uid="uid://c4u113urpg7nr" path="res://assets/components/collectable_component.tscn" id="4_jqpcl"]
+[ext_resource type="Script" path="res://assets/components/collectable_component.gd" id="5_sj1gi"]
 
 [sub_resource type="Animation" id="Animation_s86re"]
 length = 0.001
@@ -21,7 +23,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../CollisionShape2D:disabled")
+tracks/1/path = NodePath("../CollectableComponent/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -60,7 +62,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../CollisionShape2D:disabled")
+tracks/1/path = NodePath("../CollectableComponent/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -197,8 +199,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_n06l3"]
 radius = 5.38516
 
-[node name="Coin" type="Area2D"]
-collision_mask = 2
+[node name="Coin" type="Node2D"]
 script = ExtResource("1_agdcu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -212,11 +213,14 @@ sprite_frames = SubResource("SpriteFrames_jcfq3")
 autoplay = "default"
 frame_progress = 0.743989
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_n06l3")
-
 [node name="PickUp" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_7cu40")
 bus = &"Effects"
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="CollectableComponent" parent="." instance=ExtResource("4_jqpcl")]
+script = ExtResource("5_sj1gi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent"]
+shape = SubResource("CircleShape2D_n06l3")
+
+[connection signal="collected" from="CollectableComponent" to="." method="_on_collectable_component_collected"]
