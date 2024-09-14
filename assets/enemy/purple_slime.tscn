@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bka0iqvy0oe8m" path="res://assets/enemy/green_slime.tscn" id="1_dwglm"]
 [ext_resource type="Texture2D" uid="uid://cnhb8e0sogwgc" path="res://addons/brackeys/sprites/slime_purple.png" id="2_ccunn"]
-[ext_resource type="PackedScene" uid="uid://b6a72v0avn3r" path="res://assets/coin.tscn" id="2_jq1su"]
+[ext_resource type="PackedScene" uid="uid://b6a72v0avn3r" path="res://assets/pickups/coin.tscn" id="2_jq1su"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1orbh"]
 atlas = ExtResource("2_ccunn")

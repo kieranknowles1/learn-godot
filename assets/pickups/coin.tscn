@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://b6a72v0avn3r"]
 
-[ext_resource type="Script" path="res://scripts/coin.gd" id="1_agdcu"]
+[ext_resource type="Script" path="res://assets/pickups/coin.gd" id="1_agdcu"]
 [ext_resource type="Texture2D" uid="uid://cqhmo5lv8f3lv" path="res://addons/brackeys/sprites/coin.png" id="1_hcj0o"]
 [ext_resource type="AudioStream" uid="uid://8ju8vlmrgg1y" path="res://addons/brackeys/sounds/coin.wav" id="3_7cu40"]
 [ext_resource type="PackedScene" uid="uid://c4u113urpg7nr" path="res://assets/components/collectable_component.tscn" id="4_jqpcl"]
