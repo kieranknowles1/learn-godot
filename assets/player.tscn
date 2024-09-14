@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://p8bosniw2cug"]
+[gd_scene load_steps=8 format=3 uid="uid://p8bosniw2cug"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ouhki"]
 [ext_resource type="SpriteFrames" uid="uid://dqmv7hw77p1yy" path="res://assets/player_sprite.tres" id="2_hqw8n"]
+[ext_resource type="PackedScene" uid="uid://bsvhxgo10d7pb" path="res://assets/projectile.tscn" id="2_jnvya"]
 [ext_resource type="AudioStream" uid="uid://c858qefjd40u6" path="res://addons/brackeys/sounds/hurt.wav" id="3_2shld"]
 [ext_resource type="AudioStream" uid="uid://bd4ebdmec5x4m" path="res://addons/brackeys/sounds/jump.wav" id="4_i3exq"]
 [ext_resource type="AudioStream" uid="uid://xiu1bcsjiygb" path="res://addons/brackeys/sounds/tap.wav" id="5_s5meo"]
@@ -14,6 +15,7 @@ height = 14.0
 z_index = 5
 collision_layer = 2
 script = ExtResource("1_ouhki")
+projectile = ExtResource("2_jnvya")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)

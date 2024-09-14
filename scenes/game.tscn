@@ -1,11 +1,10 @@
-[gd_scene load_steps=17 format=4 uid="uid://cr0vn0goluo43"]
+[gd_scene load_steps=16 format=4 uid="uid://cr0vn0goluo43"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_5aobr"]
 [ext_resource type="PackedScene" uid="uid://p8bosniw2cug" path="res://assets/player.tscn" id="1_er8li"]
 [ext_resource type="TileSet" uid="uid://bdiv1fd21qhn3" path="res://assets/world_tileset.tres" id="2_m64a5"]
 [ext_resource type="PackedScene" uid="uid://vppusydr6eof" path="res://assets/platform.tscn" id="3_efkej"]
 [ext_resource type="PackedScene" uid="uid://b6a72v0avn3r" path="res://assets/coin.tscn" id="4_1uyiy"]
-[ext_resource type="PackedScene" uid="uid://bsvhxgo10d7pb" path="res://assets/projectile.tscn" id="4_8fgax"]
 [ext_resource type="PackedScene" uid="uid://bka0iqvy0oe8m" path="res://assets/enemy/green_slime.tscn" id="5_ei2gx"]
 [ext_resource type="PackedScene" uid="uid://bjhp0n5p2rlo8" path="res://assets/kill_trigger.tscn" id="5_p8qgu"]
 [ext_resource type="PackedScene" uid="uid://dqrthumdwvuq6" path="res://assets/score_display.tscn" id="7_e058c"]
@@ -80,7 +79,6 @@ tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAA
 tile_set = ExtResource("2_m64a5")
 
 [node name="Player" parent="." instance=ExtResource("1_er8li")]
-projectile = ExtResource("4_8fgax")
 
 [node name="Camera" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
