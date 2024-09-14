@@ -36,3 +36,7 @@ func die() -> void:
 		get_parent().add_child(item)
 
 	queue_free()
+
+
+func _on_hitbox_component_hit(_by: Node2D) -> void:
+	die()

@@ -28,20 +28,17 @@ func _process(delta: float) -> void:
 		return
 	position += SPEED * direction * delta
 
-# We touch something, not necessarily a character
-func _on_damage_area_entered(_body: Node2D) -> void:
-	_on_impact()
 
-# We touch a character, kill it if it has a die method
-func _on_damage_area_body_entered(body: Node2D) -> void:
-	# Destroy the stopped object if we can
-	if body.has_method("die"):
-		body.die()
-
-	_on_impact()
 
 func _on_timeout_timeout() -> void:
 	if stopped:
 		return
 	animatiom.play("timeout")
 	stopped = true
+
+# We touch something
+func _on_damage_area_area_entered(area: Area2D) -> void:
+	# Only hit an explicit HitboxComponent
+	if area is HitboxComponent:
+		area.on_hit(self)
+		_on_impact()

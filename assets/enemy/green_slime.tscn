@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://bka0iqvy0oe8m"]
+[gd_scene load_steps=19 format=3 uid="uid://bka0iqvy0oe8m"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_n1j5f"]
 [ext_resource type="Texture2D" uid="uid://c4jrrpm8b55lu" path="res://addons/brackeys/sprites/slime_green.png" id="1_plcxw"]
 [ext_resource type="PackedScene" uid="uid://bjhp0n5p2rlo8" path="res://assets/kill_trigger.tscn" id="2_q5t6h"]
+[ext_resource type="Script" path="res://assets/components/hitbox_component.gd" id="4_lawm0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_suoa4"]
 atlas = ExtResource("1_plcxw")
@@ -131,6 +132,11 @@ target_position = Vector2(11, 0)
 position = Vector2(0, 6)
 target_position = Vector2(-11, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="HitboxComponent" type="Area2D" parent="."]
+script = ExtResource("4_lawm0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_xdkn3")
+
+[connection signal="hit" from="HitboxComponent" to="." method="_on_hitbox_component_hit"]
