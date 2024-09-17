@@ -36,9 +36,16 @@ func _on_timeout_timeout() -> void:
 	animatiom.play("timeout")
 	stopped = true
 
-# We touch something
+# We touch another Area2D, which may be a HitboxComponent
+# that does something
 func _on_damage_area_area_entered(area: Area2D) -> void:
-	# Only hit an explicit HitboxComponent
 	if area is HitboxComponent:
 		area.on_hit(self)
 		_on_impact()
+
+
+# We touch a physics body or the tilemap
+# This doesn't respond to the hit, but we still want to stop
+# the projectile
+func _on_damage_area_body_entered(_body: Node2D) -> void:
+	_on_impact()
