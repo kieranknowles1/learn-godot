@@ -4,5 +4,6 @@ class_name CollectableComponent extends Area2D
 
 signal collected(collector: Node)
 
+
 func on_collected(collector: Node) -> void:
 	collected.emit(collector)

@@ -12,15 +12,18 @@ var stopped = false
 # Responsible for deleting the projectile
 @onready var animatiom: AnimationPlayer = $Animation
 
+
 func init(player: Player):
 	shot_by = player
 	global_position = player.attack_origin.global_position
 
 	direction = player.facing
 
+
 func _on_impact() -> void:
 	animatiom.play("explode")
 	stopped = true
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -29,12 +32,12 @@ func _process(delta: float) -> void:
 	position += SPEED * direction * delta
 
 
-
 func _on_timeout_timeout() -> void:
 	if stopped:
 		return
 	animatiom.play("timeout")
 	stopped = true
+
 
 # We touch another Area2D, which may be a HitboxComponent
 # that does something

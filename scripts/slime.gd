@@ -13,6 +13,7 @@ extends Node2D
 
 var direction = Vector2.RIGHT
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# If we hit a wall, change direction. This is reflected in the sprite flip.
@@ -25,6 +26,7 @@ func _process(delta: float) -> void:
 		sprite.flip_h = true
 
 	position += direction * speed * delta
+
 
 func die() -> void:
 	if death_item:

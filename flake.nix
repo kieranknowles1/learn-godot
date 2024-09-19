@@ -8,8 +8,12 @@
     nixcfg.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixcfg }: let
-    pkgs = import nixpkgs { system = "x86_64-linux"; };
+  outputs = {
+    nixpkgs,
+    nixcfg,
+    ...
+  }: let
+    pkgs = import nixpkgs {system = "x86_64-linux";};
     godot = pkgs.godot_4;
   in rec {
     packages.x86_64-linux = {
@@ -21,18 +25,21 @@
     devShells.x86_64-linux = {
       default = let
         openEditor = pkgs.lib.getExe packages.x86_64-linux.default;
-      # My extended version of mkShell, which preserves the user's shell of choice
-      in nixcfg.lib.shell.mkShellEx {
-        packages = [
-          godot
-          pkgs.gettext
-        ];
+        # My extended version of mkShell, which preserves the user's shell of choice
+      in
+        nixcfg.lib.shell.mkShellEx {
+          packages = [
+            godot
+            pkgs.gettext
+          ];
 
-        shellHook = ''
-          # Run the editor in the background, discarding stdout and stderr
-          ${openEditor} > /dev/null 2>&1 &
-        '';
-      };
+          shellHook = ''
+            # Run the editor in the background, discarding stdout and stderr
+            ${openEditor} > /dev/null 2>&1 &
+          '';
+        };
     };
+
+    formatter = nixcfg.formatter;
   };
 }
