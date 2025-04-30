@@ -27,7 +27,7 @@
         openEditor = pkgs.lib.getExe packages.x86_64-linux.default;
         # My extended version of mkShell, which preserves the user's shell of choice
       in
-        nixcfg.lib.shell.mkShellEx {
+        nixcfg.lib.shell.mkShellEx pkgs.mkShell {
           packages = [
             godot
             pkgs.gettext
@@ -40,6 +40,6 @@
         };
     };
 
-    formatter = nixcfg.formatter;
+    inherit (nixcfg) formatter;
   };
 }
