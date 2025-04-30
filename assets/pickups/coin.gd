@@ -4,6 +4,7 @@ extends Node2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+
 func _on_collectable_component_collected(collector: Node) -> void:
 	if collector is not Player:
 		return
