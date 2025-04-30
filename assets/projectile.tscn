@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://bsvhxgo10d7pb"]
 
 [ext_resource type="Texture2D" uid="uid://do3lgd7alchfe" path="res://addons/brackeys/sprites/fruit.png" id="1_bhd63"]
-[ext_resource type="Script" path="res://scripts/projectile.gd" id="1_h44yj"]
+[ext_resource type="Script" uid="uid://buk74d3qvwpcm" path="res://scripts/projectile.gd" id="1_h44yj"]
 [ext_resource type="AudioStream" uid="uid://bfkku0frjbbmk" path="res://addons/brackeys/sounds/explosion.wav" id="3_fx8us"]
 [ext_resource type="Texture2D" uid="uid://boqyysvpomjrb" path="res://addons/bdragon/Red Effect Bullet Impact Explosion 32x32.png" id="3_soh6d"]
 
@@ -266,9 +266,9 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o0etj"]
 _data = {
-"RESET": SubResource("Animation_ft1ew"),
-"explode": SubResource("Animation_o4yuh"),
-"timeout": SubResource("Animation_nfyal")
+&"RESET": SubResource("Animation_ft1ew"),
+&"explode": SubResource("Animation_o4yuh"),
+&"timeout": SubResource("Animation_nfyal")
 }
 
 [node name="Projectile" type="Node2D"]
@@ -288,7 +288,7 @@ stream = ExtResource("3_fx8us")
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_o0etj")
+&"": SubResource("AnimationLibrary_o0etj")
 }
 
 [node name="Timeout" type="Timer" parent="."]

@@ -45,8 +45,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8oblk"]
 _data = {
-"RESET": SubResource("Animation_aspke"),
-"move": SubResource("Animation_dmm8v")
+&"RESET": SubResource("Animation_aspke"),
+&"move": SubResource("Animation_dmm8v")
 }
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n3lcd"]

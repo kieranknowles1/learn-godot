@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://bka0iqvy0oe8m"]
 
-[ext_resource type="Script" path="res://scripts/slime.gd" id="1_n1j5f"]
+[ext_resource type="Script" uid="uid://dab4mci5ugicg" path="res://scripts/slime.gd" id="1_n1j5f"]
 [ext_resource type="Texture2D" uid="uid://c4jrrpm8b55lu" path="res://addons/brackeys/sprites/slime_green.png" id="1_plcxw"]
 [ext_resource type="PackedScene" uid="uid://bjhp0n5p2rlo8" path="res://assets/kill_trigger.tscn" id="2_q5t6h"]
 [ext_resource type="PackedScene" uid="uid://wiq7y83vs2d" path="res://assets/components/hitbox_component.tscn" id="4_x24w7"]

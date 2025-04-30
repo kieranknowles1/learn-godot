@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=4 uid="uid://c1juo5kjiqcal"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_0bme8"]
+[ext_resource type="Script" uid="uid://b6pdk2i765djn" path="res://scripts/main_menu.gd" id="1_0bme8"]
 [ext_resource type="TileSet" uid="uid://bdiv1fd21qhn3" path="res://assets/world_tileset.tres" id="1_vv2no"]
 [ext_resource type="SpriteFrames" uid="uid://dqmv7hw77p1yy" path="res://assets/sprites/player_sprite.tres" id="2_yf2c2"]
 
