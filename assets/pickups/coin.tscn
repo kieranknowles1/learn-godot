@@ -205,7 +205,7 @@ script = ExtResource("1_agdcu")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../PickUp")
 libraries = {
-"": SubResource("AnimationLibrary_srs3m")
+&"": SubResource("AnimationLibrary_srs3m")
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -128,7 +128,7 @@ position = Vector2(850, 21)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Interaction/Platform2"]
 root_node = NodePath("../../Platform2")
 libraries = {
-"": SubResource("AnimationLibrary_8oblk")
+&"": SubResource("AnimationLibrary_8oblk")
 }
 autoplay = "RESET"
 
