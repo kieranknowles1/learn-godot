@@ -4,8 +4,26 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
-    nixcfg.url = "github:kieranknowles1/nixcfg";
-    nixcfg.inputs.nixpkgs.follows = "nixpkgs";
+    nixcfg = {
+      url = "github:kieranknowles1/nixcfg";
+      inputs.copyparty.follows = "";
+      inputs.factorio-blueprints.follows = "";
+      inputs.firefox-addons.follows = "";
+      inputs.home-manager.follows = "";
+      inputs.ixx.follows = "";
+      inputs.nix-index-database.follows = "";
+      inputs.nix-minecraft.follows = "";
+      inputs.nixos-cosmic.follows = "";
+      inputs.nixos-raspberrypi-kernellock.follows = "";
+      inputs.nixos-raspberrypi.follows = "";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nuschtosSearch.follows = "";
+      inputs.sops-nix.follows = "";
+      inputs.src-openmw.follows = "";
+      inputs.src-tldr.follows = "";
+      inputs.stylix.follows = "";
+      inputs.vscode-extensions.follows = "";
+    };
   };
 
   outputs = {
